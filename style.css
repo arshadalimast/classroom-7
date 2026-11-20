@@ -448,7 +448,7 @@ main
         padding: 5px;
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        /* overflow-x: auto; */
         white-space: nowrap;
         gap: 18px;
     }
