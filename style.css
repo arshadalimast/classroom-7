@@ -1,0 +1,517 @@
+ *
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ body, html
+ {
+    height: 100%;
+    width: 100%;
+}
+
+main
+{
+    min-height: 100%;
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+ }
+
+ header
+ {
+    height: auto;
+    width: 100%;
+    background-color: #000;
+ }
+
+ .logo img
+ {
+  height: 80px;
+  width: 200px;
+ }
+
+ nav 
+ {
+    height: 100px;
+     padding: 0 150px;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+ }
+
+ .navlink
+ {
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    align-items: center;
+    gap: 2vw;
+ }
+
+ .navlink li
+ {
+    list-style: none;
+ }
+
+ .navlink a 
+ {
+    color: #fff;
+    text-decoration: none;
+ }
+
+ .movie 
+ {
+    padding-top: 10px;
+    width: 100%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+ }
+
+ .movie:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.6) transparent; /* Firefox ke liye */
+}
+
+.movie::-webkit-scrollbar {
+  height: 8px; /* Scrollbar ki motai */
+}
+
+.movie::-webkit-scrollbar-track {
+  background: transparent; /* Track invisible rahega */
+}
+
+.movie::-webkit-scrollbar-thumb {
+  background: transparent; /* By default scrollbar thumb invisible rahega */
+  border-radius: 4px;
+}
+
+.movie::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 5, 5, 0.9); /* Jab scrollbar par mouse jaye toh aur bright ho jaye */
+}
+
+
+
+ .movie img
+ {
+    height: 150px;
+    width: 120px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    outline: none;
+    transition: all 0.5s ease, border 0.5s ease;
+}
+
+.movie img:hover{
+    transform: scale(1.1);
+}
+
+.movie img:focus {
+  outline: 4px solid #ffffff;
+  outline-offset: -4px;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(184, 19, 19, 0.9);
+  z-index: 10;
+}
+
+.nav2 
+{
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid #333333;
+     border-bottom: 1px solid #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.navname
+{
+    display: flex;
+    gap: 1.2vw;
+    align-items: center;
+    padding-left: 160px;
+}
+
+.navname
+{
+    list-style: none;
+}
+
+.navname a
+{
+ text-decoration: none;
+ color: #fff;
+ font-size: 16px;
+ letter-spacing: 1.2px;
+ font-weight: 500;
+}
+
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+    list-style: none;
+}
+
+.menu
+{
+    display: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+.btn 
+{
+    width: 124px;
+    height: 42px;
+    margin: 3px;
+    padding: 12px 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    background: #ffcc00;
+    color: #000;
+    border-radius: 5px;
+}
+
+.inp {
+    width: 200px;
+    height: 45px;
+    margin-right: 25px;
+}
+
+.inp input
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid rgb(10, 116, 236);
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+.inp input::placeholder{
+    font-size: 18px;
+}
+
+.inp input:placeholder-shown{
+    font-size: 18px;
+}
+
+.latest {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background:#141414; 
+  color: #fff;
+  margin-top: 10px; 
+  justify-content: flex-start;
+  margin-left: 150px;
+  border-radius: 8px;
+  width: 70%;
+  border: 1px solid rgb(66, 62, 62);
+}
+
+.latest h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.latest i {
+  color: #ffcc00; /* Icon ka color agar yellow/fire jaisa chahiye */
+  font-size: 20px;
+}
+
+
+.footer 
+{
+    height: auto;
+    width: 100%;
+    /* padding-left: 50px; */
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+.container 
+{
+       width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.poster,
+.poster-ring {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.5s;
+}
+
+.poster img,
+.poster-ring img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    object-fit: cover;
+}
+
+.poster h4,
+.poster-ring h4 {
+    width: 90%;
+    margin: 10px 0 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .nav2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 12px 20px;
+        gap: 15px;
+    }
+
+    .navname {
+
+        padding: 0;
+        /* flex-shrink: 0; */
+    }
+
+    .navname li {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-size: 25px;
+        color: #ffcc00;
+        cursor: pointer;
+    }
+
+    .inp {
+        width: 200px;
+        height: 42px;
+        margin: 0;
+        /* flex-shrink: 0; */
+    }
+}
+
+
+
+/* Laptop */
+@media (max-width: 1200px) {
+
+    nav {
+        padding: 0 40px;
+        gap: 30px;
+    }
+
+    .navname {
+        padding-left: 20px;
+    }
+
+    .container {
+        width: 90%;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .latest {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    nav {
+        height: auto;
+        min-height: 100px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navlink {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 94%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .navname {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .inp {
+        margin-right: 10px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 10px;
+    }
+
+    .logo img {
+        width: 160px;
+        height: 65px;
+        object-fit: contain;
+    }
+
+    .navlink {
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .navlink::-webkit-scrollbar {
+        display: none;
+    }
+
+    .movie {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .movie img {
+        width: 100px;
+        height: 130px;
+    }
+
+    .nav2 {
+        height: auto;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .navname {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 18px;
+    }
+
+    .navname a {
+        font-size: 13px;
+    }
+
+    .btn {
+        flex-shrink: 0;
+    }
+
+    .inp {
+        width: 100%;
+        height: 42px;
+        margin: 0;
+    }
+
+    .latest {
+        width: 94%;
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    .latest h2 {
+        font-size: 19px;
+    }
+
+    .container {
+        width: 94%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .poster h4,
+    .poster-ring h4 {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .footer {
+        padding-top: 10px;
+    }
+}
+
+
+/* Small Mobile */
+@media (max-width: 360px) {
+
+    .container {
+        width: 96%;
+        gap: 8px;
+    }
+
+    .poster h4,
+    .poster-ring h4 {
+        font-size: 11px;
+    }
+
+    .movie img {
+        width: 85px;
+        height: 115px;
+    }
+}
+
+
