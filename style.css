@@ -102,7 +102,7 @@ main
     height: 150px;
     width: 120px;
     object-fit: cover;
-    object-position: bottom;
+    object-position: center;
     flex-shrink: 0;
     outline: none;
     transition: all 0.5s ease, border 0.5s ease;
@@ -257,8 +257,7 @@ main
     gap: 15px;
 }
 
-.poster,
-.poster-ring {
+.poster{
     width: 100%;
     min-height: 100%;
     height: auto;
@@ -270,16 +269,14 @@ main
     transition: color 0.5s;
 }
 
-.poster img,
-.poster-ring img {
+.poster img{
     width: 100%;
     aspect-ratio: 3 / 4;
     height: auto;
     object-fit: cover;
 }
 
-.poster h4,
-.poster-ring h4 {
+.poster h4{
     width: 90%;
     margin: 10px 0 15px;
     line-height: 1.5;
@@ -479,8 +476,7 @@ main
         gap: 12px;
     }
 
-    .poster h4,
-    .poster-ring h4 {
+    .poster h4{
         font-size: 12px;
         line-height: 1.4;
     }
@@ -499,14 +495,15 @@ main
         gap: 8px;
     }
 
-    .poster h4,
-    .poster-ring h4 {
+    .poster h4 {
         font-size: 11px;
     }
 
     .movie img {
         width: 85px;
         height: 115px;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
