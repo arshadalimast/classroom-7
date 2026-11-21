@@ -33,16 +33,16 @@ main
   width: 200px;
  }
 
- nav 
+ .top-banner
  {
     height: 100px;
-     padding: 0 150px;
+     padding: 0 120px;
     display: flex;
     align-items: center;
     gap: 5vw;
  }
 
- .navlink
+ .top-link
  {
     display: flex;
     font-size: 17px;
@@ -50,48 +50,44 @@ main
     letter-spacing: 1px;
     align-items: center;
     gap: 2vw;
- }
-
- .navlink li
- {
     list-style: none;
- }
+}
 
- .navlink a 
- {
-    color: #fff;
+.top-link a 
+{
     text-decoration: none;
+    color: #fff;
  }
 
- .movie 
+ .top-movie 
  {
     padding-top: 10px;
     width: 100%;
-        background-color: #000;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        overflow-y: hidden;
-        overflow-x: auto;
-        scrollbar-width: thin;
-        scrollbar-color: transparent transparent;
-        transition: scrollbar-color 0.3s ease;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: 0.3s ease;
  }
 
- .movie:hover {
-  scrollbar-color: rgba(255, 255, 255, 0.6) transparent; /* Firefox ke liye */
+ .top-movie:hover {
+  scrollbar-color: rgba(235, 4, 4, 0.6) transparent; /* Firefox ke liye */
 }
 
-.movie::-webkit-scrollbar {
-  height: 8px; /* Scrollbar ki motai */
+.top-movie::-webkit-scrollbar {
+  height: 2px; /* Scrollbar ki motai */
 }
 
-.movie::-webkit-scrollbar-track {
-  background: transparent; /* Track invisible rahega */
+.top-movie::-webkit-scrollbar-track {
+  background: red; /* Track invisible rahega */
 }
 
-.movie::-webkit-scrollbar-thumb {
-  background: transparent; /* By default scrollbar thumb invisible rahega */
+.top-movie::-webkit-scrollbar-thumb {
+  background: red; /* By default scrollbar thumb invisible rahega */
   border-radius: 4px;
 }
 
@@ -101,22 +97,22 @@ main
 
 
 
- .movie img
+ .top-movie img
  {
     height: 150px;
     width: 120px;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
     flex-shrink: 0;
     outline: none;
     transition: all 0.5s ease, border 0.5s ease;
 }
 
-.movie img:hover{
+/* .top-movie img:hover{
     transform: scale(1.1);
-}
+} */
 
-.movie img:focus {
+.top-movie img:focus {
   outline: 4px solid #ffffff;
   outline-offset: -4px;
   transform: scale(1.03);
@@ -255,7 +251,7 @@ main
 
 .container 
 {
-       width: 80%;
+     width: 80%;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 15px;
@@ -341,7 +337,7 @@ main
 /* Laptop */
 @media (max-width: 1200px) {
 
-    nav {
+    .top-banner {
         padding: 0 40px;
         gap: 30px;
     }
@@ -366,15 +362,15 @@ main
 /* Tablet */
 @media (max-width: 900px) {
 
-    nav {
+    .top-banner {
         height: auto;
         min-height: 100px;
         padding: 15px 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
     }
 
-    .navlink {
+    .top-link {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
@@ -400,8 +396,8 @@ main
 /* Mobile */
 @media (max-width: 600px) {
 
-    nav {
-        flex-direction: column;
+    .top-banner {
+        /* flex-direction: column; */
         gap: 10px;
         padding: 15px 10px;
     }
@@ -412,7 +408,7 @@ main
         object-fit: contain;
     }
 
-    .navlink {
+    .top-link {
         width: 100%;
         flex-wrap: nowrap;
         justify-content: flex-start;
@@ -422,7 +418,7 @@ main
         padding: 10px;
     }
 
-    .navlink::-webkit-scrollbar {
+    .toplink::-webkit-scrollbar {
         display: none;
     }
 
